@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2032CF031BC55BFF00A7B9F8 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */; settings = {ASSET_TAGS = (); }; };
+		98E77365F45754BE5D63EF55 /* libPods-SecretAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D489259DD4198617187136C /* libPods-SecretAlbum.a */; };
 		D94926F41BC52A4D00814799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94926F31BC52A4D00814799 /* AppDelegate.swift */; };
 		D94926F91BC52A4D00814799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94926F71BC52A4D00814799 /* Main.storyboard */; };
 		D94926FB1BC52A4D00814799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94926FA1BC52A4D00814799 /* Assets.xcassets */; };
@@ -23,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11B4F64C0D4A5B47EC2F9423 /* Pods-SecretAlbum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.release.xcconfig"; sourceTree = "<group>"; };
+		1D489259DD4198617187136C /* libPods-SecretAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2032CEFE1BC559B300A7B9F8 /* SecretAlbum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretAlbum-Bridging-Header.h"; sourceTree = "<group>"; };
+		2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		75CA7A82C0E0B9CCDA55A0C8 /* Pods-SecretAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		D94926F01BC52A4D00814799 /* SecretAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94926F31BC52A4D00814799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94926F81BC52A4D00814799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,17 +52,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98E77365F45754BE5D63EF55 /* libPods-SecretAlbum.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2032CF011BC55BEC00A7B9F8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		37C25C763EC004B1560272CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75CA7A82C0E0B9CCDA55A0C8 /* Pods-SecretAlbum.debug.xcconfig */,
+				11B4F64C0D4A5B47EC2F9423 /* Pods-SecretAlbum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D94926E71BC52A4D00814799 = {
 			isa = PBXGroup;
 			children = (
 				D94926F21BC52A4D00814799 /* SecretAlbum */,
 				D94926F11BC52A4D00814799 /* Products */,
+				37C25C763EC004B1560272CF /* Pods */,
+				EE430D2E1B6D8ADF5CCCD71A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +107,7 @@
 				D94927181BC5300D00814799 /* jtdg8i1ferja5nksiauj_400x400.jpeg */,
 				D94926FC1BC52A4D00814799 /* LaunchScreen.storyboard */,
 				D94926FF1BC52A4D00814799 /* Info.plist */,
+				2032CEFE1BC559B300A7B9F8 /* SecretAlbum-Bridging-Header.h */,
 			);
 			path = SecretAlbum;
 			sourceTree = "<group>";
@@ -106,6 +134,7 @@
 		D949270B1BC52C8800814799 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2032CF011BC55BEC00A7B9F8 /* Service */,
 				D949270C1BC52C8D00814799 /* Entity */,
 			);
 			name = Model;
@@ -128,6 +157,14 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		EE430D2E1B6D8ADF5CCCD71A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D489259DD4198617187136C /* libPods-SecretAlbum.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D94927021BC52A4D00814799 /* Build configuration list for PBXNativeTarget "SecretAlbum" */;
 			buildPhases = (
+				4AFCF8681AB90C63469CAD46 /* Check Pods Manifest.lock */,
 				D94926EC1BC52A4D00814799 /* Sources */,
 				D94926ED1BC52A4D00814799 /* Frameworks */,
 				D94926EE1BC52A4D00814799 /* Resources */,
+				8CE68A726FC7C96A975CA402 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -154,6 +193,7 @@
 		D94926E81BC52A4D00814799 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ryosuke Hiramatsu";
 				TargetAttributes = {
@@ -194,6 +234,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AFCF8681AB90C63469CAD46 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8CE68A726FC7C96A975CA402 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D94926EC1BC52A4D00814799 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -202,6 +275,7 @@
 				D94927111BC52DB000814799 /* Util.swift in Sources */,
 				D949271B1BC531EF00814799 /* SettingVC.swift in Sources */,
 				D94926F41BC52A4D00814799 /* AppDelegate.swift in Sources */,
+				2032CF031BC55BFF00A7B9F8 /* AlbumService.swift in Sources */,
 				D94927171BC52F5900814799 /* Photo.swift in Sources */,
 				D949270A1BC52C0400814799 /* AlbumListVC.swift in Sources */,
 				D94927151BC52EC600814799 /* AlbumDetailCell.swift in Sources */,
@@ -316,23 +390,30 @@
 		};
 		D94927031BC52A4D00814799 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75CA7A82C0E0B9CCDA55A0C8 /* Pods-SecretAlbum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SecretAlbum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.mashroom.SecretAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SecretAlbum/SecretAlbum-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D94927041BC52A4D00814799 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11B4F64C0D4A5B47EC2F9423 /* Pods-SecretAlbum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SecretAlbum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.mashroom.SecretAlbum;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SecretAlbum/SecretAlbum-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -355,6 +436,7 @@
 				D94927041BC52A4D00814799 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

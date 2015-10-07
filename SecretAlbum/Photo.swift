@@ -8,14 +8,19 @@
 
 import UIKit
 
-class Photo: NSObject {
+class Photo: RLMObject {
     
-    let thumbnailPath: String
-    let fullPath: String
+    dynamic var thumbnailPath: String = ""
+    dynamic var fullPath: String = ""
+    
+    override init() {
+        super.init()
+    }
     
     init(thumbnailPath: String, fullPath: String) {
         self.thumbnailPath = thumbnailPath
         self.fullPath = fullPath
+        super.init()
     }
     
     class func dummy() -> Photo {

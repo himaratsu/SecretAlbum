@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlbumDetailVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class AlbumDetailVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, QBImagePickerControllerDelegate {
 
     @IBOutlet weak private var collectionView: UICollectionView!
     
@@ -43,7 +43,27 @@ class AlbumDetailVC: UIViewController, UICollectionViewDataSource, UICollectionV
     // MARK: - Actions
     
     @IBAction func addPhotoButtonTouched(sender: AnyObject) {
-        // TODO: photo picker
+        let picker = QBImagePickerController()
+        picker.delegate = self
+        picker.allowsMultipleSelection = true
+        picker.showsNumberOfSelectedAssets = true
+        
+        presentViewController(picker, animated: true, completion: nil)
+    }
+ 
+    
+    // MARK: - QBImagePickerControllerDelegate
+    
+    func qb_imagePickerController(imagePickerController: QBImagePickerController!, didFinishPickingAssets assets: [AnyObject]!) {
+        print("#### assets is \(assets.count)")
+        
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func qb_imagePickerControllerDidCancel(imagePickerController: QBImagePickerController!) {
+        print("cancel")
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }

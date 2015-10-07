@@ -8,14 +8,20 @@
 
 import UIKit
 
-class Album: NSObject {
+class Album: RLMObject {
 
-    let title: String
-    let imagePath: String
+    dynamic var title: String = ""
+    dynamic var imagePath: String = ""
+    dynamic var createdAt: NSDate?
+    
+    override init() {
+        super.init()
+    }
     
     init(title: String, imagePath: String) {
         self.title = title
         self.imagePath = imagePath
+        super.init()
     }
     
     class func dummy() -> Album {

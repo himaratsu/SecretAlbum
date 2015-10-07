@@ -11,6 +11,7 @@ import UIKit
 class AlbumListVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak private var tableView: UITableView!
+    private let service = AlbumService()
     
     var albums = [Album]()
     
@@ -21,6 +22,7 @@ class AlbumListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     private func reload() {
+        
         for _ in 1...10 {
             albums.append(Album.dummy())
         }
