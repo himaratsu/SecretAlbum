@@ -12,11 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    enum RootVCState: String {
+        case AuthVC
+        case MainVC
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        startObserving()
         return true
+    }
+    
+    private func startObserving() {
+        let nc = NSNotificationCenter.defaultCenter()
+        nc.addObserver(self, selector: "changeToMain", name: AUTH_SUCCESS, object: nil)
+        nc.addObserver(self, selector: "changeToDummy", name: AUTH_SUCCESS_DUMMY, object: nil)
+    }
+    
+    private func changeRootVC(state: RootVCState) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        window?.rootViewController = storyboard.instantiateViewControllerWithIdentifier(state.rawValue)
+    }
+    
+    func changeToMain() {
+        changeRootVC(.MainVC)
+    }
+    
+    func changeToDummy() {
+//        changeRootVC(.)
+        // ダミー
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -25,8 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        changeRootVC(.AuthVC)
     }
 
     func applicationWillEnterForeground(application: UIApplication) {

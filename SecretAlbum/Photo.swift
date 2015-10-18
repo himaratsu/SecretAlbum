@@ -22,9 +22,5 @@ class Photo: RLMObject {
         self.fullPath = fullPath
         super.init()
     }
-    
-    class func dummy() -> Photo {
-        return Photo(thumbnailPath: "", fullPath: "")
-    }
 
 }

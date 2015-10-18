@@ -22,7 +22,6 @@ class AlbumListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     }
     
     private func reload() {
-        
         for _ in 1...10 {
             albums.append(Album.dummy())
         }
@@ -40,6 +39,10 @@ class AlbumListVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueCell(AlbumListCell.self, indexPath: indexPath)
         cell.configure(albums[indexPath.row])
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     

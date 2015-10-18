@@ -5,3 +5,4 @@
 
 #import <QBImagePickerController/QBImagePickerController.h>
 #import <Realm/Realm.h>
+#import <MWPhotoBrowser/MWPhotoBrowser.h>

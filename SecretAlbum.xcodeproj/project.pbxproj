@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2032CF031BC55BFF00A7B9F8 /* AlbumService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */; settings = {ASSET_TAGS = (); }; };
+		2032CF051BC9FE5300A7B9F8 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2032CF041BC9FE5300A7B9F8 /* AuthVC.swift */; settings = {ASSET_TAGS = (); }; };
+		20C6801D1BD3D5520031057E /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6801C1BD3D5520031057E /* PhotoService.swift */; settings = {ASSET_TAGS = (); }; };
 		98E77365F45754BE5D63EF55 /* libPods-SecretAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D489259DD4198617187136C /* libPods-SecretAlbum.a */; };
 		D94926F41BC52A4D00814799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94926F31BC52A4D00814799 /* AppDelegate.swift */; };
 		D94926F91BC52A4D00814799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94926F71BC52A4D00814799 /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 		1D489259DD4198617187136C /* libPods-SecretAlbum.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretAlbum.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2032CEFE1BC559B300A7B9F8 /* SecretAlbum-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SecretAlbum-Bridging-Header.h"; sourceTree = "<group>"; };
 		2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumService.swift; sourceTree = "<group>"; };
+		2032CF041BC9FE5300A7B9F8 /* AuthVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		20C6801C1BD3D5520031057E /* PhotoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		75CA7A82C0E0B9CCDA55A0C8 /* Pods-SecretAlbum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretAlbum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretAlbum/Pods-SecretAlbum.debug.xcconfig"; sourceTree = "<group>"; };
 		D94926F01BC52A4D00814799 /* SecretAlbum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretAlbum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94926F31BC52A4D00814799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				2032CF021BC55BFF00A7B9F8 /* AlbumService.swift */,
+				20C6801C1BD3D5520031057E /* PhotoService.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 				D94927091BC52C0400814799 /* AlbumListVC.swift */,
 				D94927121BC52EA900814799 /* AlbumDetailVC.swift */,
 				D949271A1BC531EF00814799 /* SettingVC.swift */,
+				2032CF041BC9FE5300A7B9F8 /* AuthVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -272,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2032CF051BC9FE5300A7B9F8 /* AuthVC.swift in Sources */,
 				D94927111BC52DB000814799 /* Util.swift in Sources */,
 				D949271B1BC531EF00814799 /* SettingVC.swift in Sources */,
 				D94926F41BC52A4D00814799 /* AppDelegate.swift in Sources */,
@@ -279,6 +286,7 @@
 				D94927171BC52F5900814799 /* Photo.swift in Sources */,
 				D949270A1BC52C0400814799 /* AlbumListVC.swift in Sources */,
 				D94927151BC52EC600814799 /* AlbumDetailCell.swift in Sources */,
+				20C6801D1BD3D5520031057E /* PhotoService.swift in Sources */,
 				D94927071BC52BD300814799 /* AlbumListCell.swift in Sources */,
 				D94927131BC52EA900814799 /* AlbumDetailVC.swift in Sources */,
 				D949270E1BC52C9900814799 /* Album.swift in Sources */,
